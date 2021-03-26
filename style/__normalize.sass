@@ -1,0 +1,64 @@
+
+h1, h2, h3, h4, h5, h6, p
+    margin: 0
+    padding: 0
+
+*, *::before, *::after
+    box-sizing: border-box
+
+ul, ol
+    padding: 0
+    margin: 0
+ul
+    list-style: none
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+    vertical-align: bottom 
+strong
+    font-weight: 700    
+
+.btn
+    font-family: 'Roboto'
+    outline: none
+    border: none
+    cursor: pointer
+    background: none
+    border: solid 3px transparent
+    position: relative
+    z-index: 10
+    padding: 10px 25px
+    &_bg
+        background-color: #E32885
+        box-shadow: 0px 2px 0px #C51F74
+        color: white
+        text-transform: uppercase
+        font-size: 16px
+        font-weight: 700
+        transition: 0.3s
+        &:hover
+            background-color: lighten(#E32885, 10% )
+            box-shadow: 0px 2px 4px rgba( #C51F74,  0.5)
+    &_border
+        border: solid 3px transparent
+        border-image: linear-gradient(20deg, #585858 , #FDCE7D)
+        border-image-slice: 1
+        font-weight: 700
+        font-size: 14px
+        line-height: 16px
+        text-align: center
+        color: #585858
+
+.title
+    font-weight: bold
+    font-size: 36px
+    @media screen and ( max-width: 575px )
+        font-size: 24px
+.subtitle
+    font-weight: bold
+    font-size: 24px
+    line-height: 31px
+    @media screen and ( max-width: 575px )
+        font-size: 16px

@@ -1,0 +1,575 @@
+//-------header-------//
+.header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between    
+    padding: 0 40px  
+    position: relative
+    z-index: 5
+.logo
+    padding-top: 40px
+
+.topmenu     
+    margin: 0 -40px 0 0
+    padding: 14px 0 0 160px
+    background-image: url('../img/topmenu_bg.png')
+    background-repeat: no-repeat
+    ul 
+        display: flex
+        li a
+            display: block
+            padding: 5px 21px 4px
+            font-style: normal
+            font-weight: bold
+            font-size: 16px
+            line-height: 21px
+            color: #fff
+            border: solid 3px transparent 
+            transition: .7s
+            &:hover
+                border: solid 3px transparent
+                border-image: linear-gradient(20deg, #AF7039 , #FDCE7D)
+                border-image-slice: 1
+                transition: .7s
+        li.active a
+            border: solid 3px transparent
+            border-image: linear-gradient(20deg, #585858 , #FDCE7D)
+            border-image-slice: 1
+
+
+//-------mainscreen-------//
+.mainscreen
+    position: relative
+    padding: 81px 0 1px
+    margin-top: -138px
+    background-image: url('../img/main_bg.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 0 
+    z-index: 1    
+    &__fond
+        display: flex
+        flex-wrap: wrap
+        padding: 5px
+        background-color: #fff
+        box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)
+        margin-top: 37px
+        &-left
+            display: flex            
+            align-items: center
+            justify-content: space-around          
+            flex: 0 0 63.5%
+            max-width: 63.5%
+        &-right
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            flex: 0 0 36.5%
+            max-width: 36.5% 
+            padding: 25px 0 24px
+            background-color: #f7f7f7  
+            &-text 
+                font-size: 18px
+                color: #585858
+                margin-bottom: 3px
+            &-price
+                font-size: 36px
+                background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent   
+.mainscreen__title
+    color: #E32885
+    margin-bottom: 4px
+    sup 
+        font-size: 12px
+        position: relative
+        color: #fff
+        z-index: 100
+        &::before
+            content: ''
+            position: absolute
+            width: 14px
+            height: 14px
+            background: #E32885
+            color: #fff
+            top: -1px
+            right: -3px
+            font-size: 12px
+            display: inline-flex
+            transform: rotate(45deg)
+            margin: auto
+            z-index: -1
+.mainscreen__subtitle
+    color: #1DACD1
+    margin-bottom: 24px
+
+.form__label
+    background: #fff
+    width: 470px
+    display: flex
+    position: relative
+    z-index: 10
+    align-items: center
+    input
+        width: 52%
+        font-weight: normal
+        font-size: 18px
+        line-height: 21px
+        color: #585858
+        padding: 15px 15px 15px 25px
+        outline: none
+        position: relative
+        z-index: 10
+        border: none
+        &::placeholder
+
+        // ccs 4 
+        &::grammar-error 
+            color: inherit
+            background-color: #c6fbcc
+        &::spelling-error
+            color: inherit
+            background-color: #ffe5e5
+    button
+        margin-top: -3px
+        margin-left: 4px
+    .form__bg
+        width: 100%
+        height: 50px
+        position: absolute
+        z-index: 1
+
+.mainscreen__formdesc
+    width: 47%
+    margin-top: 10px
+    margin-bottom: 30px
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    color: #585858
+    a
+        font-size: 18px
+        font-weight: 700
+        line-height: 21px
+        color: #585858
+
+.mainscreen__bg
+    position: relative
+    margin-top: -292px
+    z-index: -1
+    margin-bottom: -133px
+
+    img
+        width: 100%
+
+//--------feautures---------//
+.feautures
+    position: relative    
+    padding-top: 133px    
+    padding-bottom: 130px
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 243px
+        background-image: url('../img/feautures_bg_after.png')
+        background-size: 100% 100% 
+    button 
+        display: flex
+        margin: 0 auto        
+.feautures__title
+    color: #fff
+    text-align: center
+.feautures__subtitle
+    color: #fff
+    text-align: center
+
+.feautures__row
+    display: flex
+    //flex-wrap: wrap    
+    margin: 20px 0 25px 0
+    width: 71%
+.feautures__btn 
+    position: absolute
+    // left: 50%
+    // transform: translateX(-50%)    
+.feautures__block
+    padding: 0 15px    
+    display: flex
+    align-items: center
+
+.feautures__block-ico
+    margin-right: 10px
+    div
+        width: 100px
+        height: 100px
+        background: #fff
+        border-radius: 50%
+        display: flex
+        img
+            margin: auto
+
+.feautures__block-text
+    font-family: 'Roboto'
+    font-style: normal
+    font-size: 18px
+    line-height: 21px
+    color: #FFFFFF
+
+//-------sales---------//
+.sales      
+    position: relative  
+    background-image: url('../img/sales_bg_v2.png')
+    background-repeat: no-repeat 
+    background-size: 100% 100% 
+    z-index: 2
+    .container
+        padding-top: 1px
+    &::before
+        content: ''
+        background-image: url('../img/pattern_l.png')
+        background-repeat: no-repeat 
+        background-size: 50% 50%
+        background-size: cover
+        position: absolute
+        width: 200px
+        height: 505px
+        z-index: 0
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+    &::after
+        content: ''
+        background-image: url('../img/pattern_r.png')
+        background-repeat: no-repeat 
+        background-size: 50% 50%
+        background-size: cover
+        position: absolute
+        width: 200px
+        height: 505px
+        z-index: 0
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        
+    &__bloquote
+        font-family: 'Roboto'
+        font-style: italic
+        font-weight: bold
+        font-size: 14px
+        line-height: 16px
+        text-align: center
+        color: #FFFFFF
+        padding-top: 20px
+        padding-bottom: 15px
+    button
+        text-align: center
+        margin: 0 auto
+        display: flex
+    .title
+        text-align: center
+        color: white
+        margin-top: -25px
+        sup
+            font-size: 12px
+            position: relative
+            color: #E32885
+            z-index: 100
+            &::before
+                content: ''
+                position: absolute
+                width: 14px
+                height: 14px
+                background: #fff
+                color: #E32885
+                top: -1px
+                right: -3px
+                font-size: 12px
+                display: inline-flex
+                transform: rotate(45deg)
+                margin: auto
+                z-index: -1
+    .subtitle
+        color: white
+        text-align: center
+        margin-bottom: 10px
+
+.sales__block__inner
+    background: white
+    height: 100%
+    margin-right: 20px
+.sales__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+    position: relative
+    z-index: 2
+.sales__block-left
+    flex: 0 0 50%
+    max-width: 50%
+    padding: 0 10px
+    &-one
+        background: white        
+        padding: 5px
+        font-size: 18px
+        line-height: 21px  
+        color: #585858
+        & + .sales__block-left-one
+            margin-top: 20px    
+        &__top
+            display: flex
+            justify-content: space-between
+            padding: 15px 25px
+        &__bottom
+            display: flex
+            justify-content: space-between
+            padding: 15px 25px
+            background-color: #F7F7F7
+            margin-top: auto
+            width: 100%
+            font-family: 'Roboto', 'Arial', sans-serif
+            &-left
+                flex: 0 0 42%
+                max-width: 42%
+                position: relative
+                strong
+                    display: block
+                &::after
+                    content: '+'
+                    position: absolute
+                    color: #585858
+                    font-size: 18px 
+                    font-family: 'Roboto', 'Arial', sans-serif
+                    right: 12px
+                    font-weight: 700
+                    top: 0   
+            &-right
+                flex: 0 0 58%
+                max-width: 58%
+                position: relative  
+                               
+        &__name
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 21px
+            color: #585858
+        &__price
+            font-family: 'Rotonda'
+            font-style: normal
+            font-weight: bold
+            font-size: 36px
+            line-height: 46px
+            background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent   
+            
+.sales__block-right   
+    flex: 0 0 50%
+    max-width: 50%
+    padding: 0 10px    
+    &__circle
+        width: 250px
+        height: 250px
+        background: white
+        border-radius: 50%
+        position: absolute
+        right: -40px
+        bottom: -40px
+        display: flex
+        img
+            margin: auto
+    &-one
+        background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039  55.21%, #FDCE7D 100%)
+        box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)
+        display: flex
+        flex-direction: column
+        position: relative
+        overflow: hidden 
+        height: 100%
+        padding: 25px 30px 18px
+        color: #fff
+        &-title
+            font-family: 'Roboto', 'Arial', sans-serif
+            font-size: 18px
+            line-height: 21px
+        &-price
+            font-size: 64px
+            padding-top: 20px
+            
+            strong
+                font-size: 96px
+            sup
+                position: relative
+                font-weight: bold
+                font-size: 12px
+                line-height: 15px
+                //color: #565656
+                z-index: 5
+                background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent   
+                &::before
+                    content: ''
+                    width: 15px
+                    height: 15px
+                    position: absolute
+                    top: -1px
+                    right: -4px
+                    background-color: #fff
+                    transform: rotate(45deg)
+                    z-index: -1
+        &-desc
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 28px
+            color: #FFFFFF
+            margin-top: 10px
+        &-bottom
+            margin-top: auto
+            font-family: 'Roboto'
+            max-width: 48%
+            strong
+                font-weight: bold
+                font-size: 24px
+                line-height: 28px
+                color: #FFFFFF
+
+
+
+// OFFER
+.offer
+    padding-top: 120px
+    // background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
+    padding-bottom: 104px
+    position: relative    
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 243px
+        background-image: url('../img/offer_bg_before.png')
+        background-size: 100% 100%
+    .title
+        color: #fff
+        text-align: center
+    .subtitle
+        color: #fff
+        text-align: center
+        padding-bottom: 15px
+        
+    &__row
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+        align-items: stretch        
+        margin: 0 -10px
+        margin-top: 63px
+    &__block
+        flex: 0 0 50%
+        max-width: 50%
+        padding: 0 10px 
+        &-wrap
+            display: flex
+            flex-direction: column
+            background-color: #fff
+            padding: 1px 42px 45px
+            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)             
+            height: 100%         
+        &-image
+            position: relative
+            margin-top: -63px  
+            margin-bottom: 16px
+        &-title
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            margin-bottom: 13px
+        &-name
+            font-size: 30px                       
+            color: #1DACD1
+        &-unit
+            font-size: 18px
+            line-height: 21px
+            font-weight: 700
+            color: #585858  
+            padding-bottom: 1px
+            font-family: 'Roboto'
+        &-text 
+            font-size: 18px
+            line-height: 21px
+            color: #585858
+            font-family: 'Roboto'
+            margin-bottom: 26px
+        &-btns
+            display: flex
+            flex-wrap: wrap
+            align-items: flex-start   
+            margin-top: auto 
+        &-more-btn
+            margin-right: 18px 
+        &-reviews-btn
+            margin-top: 2px    
+    &__text
+        color: #fff
+        text-align: center
+        font-family: 'Roboto'
+        font-size: 18px
+        line-height: 21px
+        padding: 20px 0 50px 0
+
+//FOOTER
+.footer
+    background-image: url('../img/footer_bg.png')
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    margin-top: -213px    
+    padding: 177px 40px 0
+    position: relative
+    color: white    
+    z-index: 1
+    &__block-link
+        display: flex
+        align-items: center
+        padding: 20px 0
+        div
+            &:nth-child(1)
+                margin-right: 40px
+            &:nth-child(2)
+                margin-right: 40px
+            margin-right: 10px
+            a
+                color: #fff
+                font-size: 16px
+                line-height: 21px
+                transition: 0.2s
+                &:hover
+                    filter: drop-shadow(0 0 5px rgba(black ,0.3 ))
+
+    &__info, &__menu
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 14px
+        color: #FFFFFF
+    &__menu
+        list-style-position: inside
+        padding: 15px 0 25px 0
+                    
+
+
+
+
+          
