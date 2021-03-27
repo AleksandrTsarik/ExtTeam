@@ -8,14 +8,33 @@
     z-index: 5
 .logo
     padding-top: 40px
+    @media screen and ( max-width: 1050px )
+        position: absolute
+        left: 100px
+        top: -20px
+    @media screen and ( max-width: 768px )
+        padding-top: 35px
+        left: 20px    
+    img
+        @media screen and ( max-width: 1050px )
+            width: 87px
 
 .topmenu     
     margin: 0 -40px 0 0
     padding: 14px 0 0 160px
     background-image: url('../img/topmenu_bg.png')
     background-repeat: no-repeat
+    @media screen and ( max-width: 1050px )
+        margin-left: auto
+        height: 100px
+    @media screen and ( max-width: 991px )
+        height: 120px
+    @media screen and ( max-width: 768px )
+        display: none
     ul 
         display: flex
+        @media screen and ( max-width: 768px )
+            display: none
         li a
             display: block
             padding: 5px 21px 4px
@@ -26,6 +45,8 @@
             color: #fff
             border: solid 3px transparent 
             transition: .7s
+            @media screen and ( max-width: 991px )
+                padding: 5px 7px 4px
             &:hover
                 border: solid 3px transparent
                 border-image: linear-gradient(20deg, #AF7039 , #FDCE7D)
@@ -35,6 +56,36 @@
             border: solid 3px transparent
             border-image: linear-gradient(20deg, #585858 , #FDCE7D)
             border-image-slice: 1
+.mobilenav
+    display: none         
+    background-repeat: no-repeat  
+    background-image: url('../img/topmenu_bg_mobile.png')  
+    margin-left: auto  
+    margin-right: -40px
+    padding-right: 20px
+    padding-top: 20px
+    padding-left: 110px
+    padding-bottom: 30px
+    // padding-right: 20px
+    @media screen and ( max-width: 768px )
+        display: block
+    ul
+        display: flex
+        li 
+            margin-left: 10px
+            a
+                display: flex
+                width: 43px
+                height: 43px
+                position: relative            
+                img
+                    position: absolute  
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 0              
+                    margin: auto    
+               
 
 
 //-------mainscreen-------//
@@ -47,19 +98,61 @@
     background-repeat: no-repeat
     background-position: 50% 0 
     z-index: 1    
+    @media screen and ( max-width: 1155px )
+        padding: 160px 0 1px
+        background-size: inherit
+    @media screen and ( max-width: 1155px )
+        background-position: right -210px top 0   
+    @media screen and ( max-width: 575px )
+        background-image: url('../img/main_bg_mobile.png')
+        background-size: 100% auto 
+        background-position: 50% 55%
+        background-color: #e8e4e5
+    &__image
+        transform: translateX(-100%)
+        opacity: 0
+        transition: 1s
+        &._active
+            transform: translateY(0)
+            opacity: 1
+        img
+            @media screen and ( max-width: 575px )
+                display: none   
+        .mobile
+            display: none
+            @media screen and ( max-width: 575px )
+                display: inline   
+
     &__fond
         display: flex
         flex-wrap: wrap
         padding: 5px
         background-color: #fff
         box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)
-        margin-top: 37px
+        //calmargin-top: 37px
+        margin-top: 203px
+        @media screen and ( max-width: 1440px )
+            margin-top: 37px
+        @media screen and ( max-width: 768px )
+            margin-top: 20px   
+             
         &-left
             display: flex            
             align-items: center
             justify-content: space-around          
             flex: 0 0 63.5%
             max-width: 63.5%
+            @media screen and ( max-width: 991px )
+                flex: 0 0 100%
+                max-width: 100%
+                @media screen and ( max-width: 575px )
+                    padding: 12px 0
+            &-one
+                img
+                    max-width: 100%
+                @media screen and ( max-width: 575px )
+                    margin: 0 10px
+                    
         &-right
             display: flex
             flex-direction: column
@@ -69,23 +162,38 @@
             max-width: 36.5% 
             padding: 25px 0 24px
             background-color: #f7f7f7  
+            @media screen and ( max-width: 991px )
+                flex: 0 0 100%
+                max-width: 100%
+                @media screen and ( max-width: 575px )
+                    padding: 16px 0 12px
             &-text 
                 font-size: 18px
                 color: #585858
                 margin-bottom: 3px
+                @media screen and ( max-width: 575px )
+                    font-size: 14px                    
             &-price
                 font-size: 36px
                 background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
                 -webkit-background-clip: text
                 -webkit-text-fill-color: transparent   
+                @media screen and ( max-width: 575px )
+                    font-size: 24px   
 .mainscreen__title
     color: #E32885
     margin-bottom: 4px
+    @media screen and ( max-width: 768px )
+        text-align: center
+    @media screen and ( max-width: 575px )
+        font-size: 24px   
     sup 
         font-size: 12px
         position: relative
         color: #fff
         z-index: 100
+        @media screen and ( max-width: 575px )
+            font-size: 10px
         &::before
             content: ''
             position: absolute
@@ -100,45 +208,75 @@
             transform: rotate(45deg)
             margin: auto
             z-index: -1
+            @media screen and ( max-width: 575px )
+                width: 12px
+                height: 12px   
+                right: -4px   
+            @media screen and ( max-width: 320px )
+                right: -3px
+                
 .mainscreen__subtitle
     color: #1DACD1
     margin-bottom: 24px
+    @media screen and ( max-width: 768px  )
+        text-align: center
+    @media screen and ( max-width: 575px  )
+       line-height: 20px
+       margin-bottom: 15px
 
 .form__label
-    background: #fff
-    width: 470px
-    display: flex
-    position: relative
-    z-index: 10
-    align-items: center
-    input
-        width: 52%
-        font-weight: normal
-        font-size: 18px
-        line-height: 21px
-        color: #585858
-        padding: 15px 15px 15px 25px
-        outline: none
+    .form__open
+        @media screen and ( max-width: 768px )
+            display: none
+    .form__close
+        display: none
+        @media screen and ( max-width: 768px )
+            display: flex
+            flex-direction: column
+            input
+                width: 100%
+            button
+                width: 99%
+                margin: 2px 2px 4px 2px
+    div
+        background: #fff
+        width: 470px
+        display: flex
         position: relative
         z-index: 10
-        border: none
-        &::placeholder
+        align-items: center
+        @media screen and ( max-width: 768px )
+            width: 100%
+        input
+            width: 52%
+            font-weight: normal
+            font-size: 18px
+            line-height: 21px
+            color: #585858
+            padding: 15px 15px 15px 25px
+            outline: none
+            position: relative
+            z-index: 10
+            border: none
+            @media screen and ( max-width: 575px )
+                text-align: center
+            &::placeholder
 
-        // ccs 4 
-        &::grammar-error 
-            color: inherit
-            background-color: #c6fbcc
-        &::spelling-error
-            color: inherit
-            background-color: #ffe5e5
-    button
-        margin-top: -3px
-        margin-left: 4px
-    .form__bg
-        width: 100%
-        height: 50px
-        position: absolute
-        z-index: 1
+            // ccs 4 
+            &::grammar-error 
+                color: inherit
+                background-color: #c6fbcc
+            &::spelling-error
+                color: inherit
+                background-color: #ffe5e5
+        button
+            margin-top: -3px
+            margin-left: 4px
+        .form__bg
+            width: 100%
+            height: 50px
+            position: absolute
+            z-index: 1
 
 .mainscreen__formdesc
     width: 47%
@@ -150,6 +288,13 @@
     font-size: 18px
     line-height: 21px
     color: #585858
+    @media screen and ( max-width: 768px )
+        width: 100%
+        text-align: center
+    @media screen and ( max-width: 575px )
+        font-size: 16px 
+        margin-bottom: 285px  
+        
     a
         font-size: 18px
         font-weight: 700
@@ -158,18 +303,42 @@
 
 .mainscreen__bg
     position: relative
-    margin-top: -292px
+    margin-top: -300px
     z-index: -1
     margin-bottom: -133px
-
+    @media screen and ( max-width: 1440px )
+        margin-top: -293px
+    @media screen and ( max-width: 1150px )
+        margin-bottom: -90px
+    @media screen and ( max-width: 768px )        
+        background-image: url('../img/bg_mobile.png')
+        background-size: 100% 100%
+        background-repeat: no-repeat        
+        height: 445px  
+        margin-top: -395px  
     img
         width: 100%
+        @media screen and ( max-width: 768px )
+            display: none    
 
 //--------feautures---------//
 .feautures
     position: relative    
     padding-top: 133px    
-    padding-bottom: 130px
+    padding-bottom: 130px    
+    @media screen and ( max-width: 1120px )
+        padding-top: 200px
+    @media screen and ( max-width: 991px )
+        padding-top: 140px
+    @media screen and ( max-width: 991px )
+        padding-top: 180px
+    @media screen and ( max-width: 768px )
+        padding-top: 140px    
+    @media screen and ( max-width: 575px )
+        padding-bottom: 229px
+    @media screen and ( max-width: 375px )
+        padding-top: 100px
+        padding-bottom: 240px
     &::after
         content: ''
         position: absolute
@@ -179,6 +348,8 @@
         height: 243px
         background-image: url('../img/feautures_bg_after.png')
         background-size: 100% 100% 
+        @media screen and ( max-width: 557px )
+           background-image: url('../img/feautures_bg_after_mobile.png') 
     button 
         display: flex
         margin: 0 auto        
@@ -191,20 +362,48 @@
 
 .feautures__row
     display: flex
-    //flex-wrap: wrap    
     margin: 20px 0 25px 0
     width: 71%
+    @media screen and ( max-width: 1300px )
+        width: 100%
+        margin: 20px 0 50px 0
+    @media screen and ( max-width: 768px )
+        flex-wrap: wrap
 .feautures__btn 
     position: absolute
-    // left: 50%
-    // transform: translateX(-50%)    
+    z-index: 10
+    left: 50%
+    transform: translateX(-50%)    
 .feautures__block
     padding: 0 15px    
     display: flex
     align-items: center
+    transition: 1s
+    @media screen and ( max-width: 1300px )
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        flex: 0 0 33.333%
+        max-width: 33.333%
+        text-align: center
+    @media screen and ( max-width: 768px )
+        flex: 0 0 100%
+        max-width: 100%
+        flex-direction: column
+        margin-bottom: 25px
+
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3)
+    &._active
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
 
 .feautures__block-ico
     margin-right: 10px
+    @media screen and ( max-width: 1300px )
+        margin-right: 0
+        margin-bottom: 25px
+    @media screen and ( max-width: 768px )
+        margin-bottom: 10px
     div
         width: 100px
         height: 100px
@@ -220,6 +419,10 @@
     font-size: 18px
     line-height: 21px
     color: #FFFFFF
+    @media screen and ( max-width: 1300px )
+        height: 55px
+    @media screen and ( max-width: 768px )
+        height: auto
 
 //-------sales---------//
 .sales      
@@ -228,6 +431,8 @@
     background-repeat: no-repeat 
     background-size: 100% 100% 
     z-index: 2
+    @media screen and ( max-width: 575px )
+        background-image: url('../img/sales_bg_v3.png')
     .container
         padding-top: 1px
     &::before
@@ -243,6 +448,8 @@
         top: 50%
         left: 0
         transform: translateY(-50%)
+        @media screen and ( max-width: 575px )
+            display: none
     &::after
         content: ''
         background-image: url('../img/pattern_r.png')
@@ -256,6 +463,8 @@
         top: 50%
         right: 0
         transform: translateY(-50%)
+        @media screen and ( max-width: 575px )
+            display: none
         
     &__bloquote
         font-family: 'Roboto'
@@ -280,6 +489,8 @@
             position: relative
             color: #E32885
             z-index: 100
+            @media screen and ( max-width: 575px )
+                font-size: 10px
             &::before
                 content: ''
                 position: absolute
@@ -294,6 +505,13 @@
                 transform: rotate(45deg)
                 margin: auto
                 z-index: -1
+                @media screen and ( max-width: 575px )
+                    width: 12px
+                    height: 12px   
+                    right: -4px   
+                @media screen and ( max-width: 320px )
+                    right: -3px
+                
     .subtitle
         color: white
         text-align: center
@@ -313,6 +531,9 @@
     flex: 0 0 50%
     max-width: 50%
     padding: 0 10px
+    @media screen and ( max-width: 991px )
+        flex: 0 0 100%
+        max-width: 100%
     &-one
         background: white        
         padding: 5px
@@ -333,10 +554,16 @@
             margin-top: auto
             width: 100%
             font-family: 'Roboto', 'Arial', sans-serif
+            @media screen and ( max-width: 500px )
+                flex-direction: column
             &-left
                 flex: 0 0 42%
                 max-width: 42%
                 position: relative
+                @media screen and ( max-width: 500px )
+                    margin-bottom: 20px
+                    flex: 0 0 100%
+                    max-width: 100%
                 strong
                     display: block
                 &::after
@@ -348,11 +575,24 @@
                     right: 12px
                     font-weight: 700
                     top: 0   
+
+                    @media screen and ( max-width: 500px )
+                        display: none
             &-right
                 flex: 0 0 58%
                 max-width: 58%
                 position: relative  
-                               
+                @media screen and ( max-width: 1320px )
+                    padding-left: 10px
+                @media screen and ( max-width: 500px )
+                    padding-left: 0
+                    flex: 0 0 100%
+                    max-width: 100%
+                    &::after
+                        content: '+'
+                        position: absolute
+                        top: -20px
+                        left: 0
         &__name
             font-family: Roboto
             font-style: normal
@@ -374,6 +614,10 @@
     flex: 0 0 50%
     max-width: 50%
     padding: 0 10px    
+    @media screen and ( max-width: 991px )
+        flex: 0 0 100%
+        max-width: 100%
+        margin-top: 20px
     &__circle
         width: 250px
         height: 250px
@@ -383,8 +627,22 @@
         right: -40px
         bottom: -40px
         display: flex
+        @media screen and ( max-width: 1400px )
+            width: 200px
+            height: 200px
+        @media screen and ( max-width: 890px )
+            width: 150px
+            height: 150px
         img
             margin: auto
+            @media screen and ( max-width: 1400px )
+                width: 90px    
+                position: absolute
+                left: 46px
+                top: 42px                  
+            @media screen and ( max-width: 890px )   
+                left: 27px
+                top: 27px
     &-one
         background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039  55.21%, #FDCE7D 100%)
         box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)
@@ -405,6 +663,8 @@
             
             strong
                 font-size: 96px
+                @media screen and ( max-width: 1320px )
+                    font-size: 60px
             sup
                 position: relative
                 font-weight: bold
@@ -425,6 +685,14 @@
                     background-color: #fff
                     transform: rotate(45deg)
                     z-index: -1
+
+                    @media screen and ( max-width: 575px )
+                        width: 12px
+                        height: 12px   
+                        right: -4px   
+                    @media screen and ( max-width: 320px )
+                        right: -3px
+                
         &-desc
             font-family: 'Roboto'
             font-style: normal
@@ -437,13 +705,13 @@
             margin-top: auto
             font-family: 'Roboto'
             max-width: 48%
+            @media screen and ( max-width: 991px )
+                max-width: 70%
             strong
                 font-weight: bold
                 font-size: 24px
                 line-height: 28px
                 color: #FFFFFF
-
-
 
 // OFFER
 .offer
@@ -451,6 +719,8 @@
     // background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
     padding-bottom: 104px
     position: relative    
+    @media screen and ( max-width: 575px )
+        padding-bottom: 105px
     &::before
         content: ''
         position: absolute
@@ -460,6 +730,9 @@
         height: 243px
         background-image: url('../img/offer_bg_before.png')
         background-size: 100% 100%
+        @media screen and ( max-width: 575px )
+            background-image: url('../img/offer_bg_before_mobile.png')
+            height: 7%
     .title
         color: #fff
         text-align: center
@@ -479,25 +752,48 @@
         flex: 0 0 50%
         max-width: 50%
         padding: 0 10px 
+        @media screen and ( max-width: 768px )
+            flex: 0 0 100%
+            max-width: 100%
+            margin: 45px 0
         &-wrap
             display: flex
             flex-direction: column
             background-color: #fff
             padding: 1px 42px 45px
             box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15)             
-            height: 100%         
+            height: 100%      
+            @media screen and ( max-width: 1200px )
+                padding: 1px 20px 20px
         &-image
             position: relative
             margin-top: -63px  
             margin-bottom: 16px
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4)
+            transition: 1s
+            opacity: 0
+            &._active
+                transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+                opacity: 1
+                
+            @media screen and ( max-width: 768px )
+                margin-left: auto
+                margin-right: auto
+                // left: 50%
+                // transform: translateX(-50%)
+
         &-title
             display: flex
             justify-content: space-between
             align-items: flex-end
             margin-bottom: 13px
+            flex-wrap: wrap
+            @media screen and ( max-width: 1200px )
+                flex-wrap: wrap
         &-name
             font-size: 30px                       
             color: #1DACD1
+
         &-unit
             font-size: 18px
             line-height: 21px
@@ -505,6 +801,7 @@
             color: #585858  
             padding-bottom: 1px
             font-family: 'Roboto'
+
         &-text 
             font-size: 18px
             line-height: 21px
@@ -516,6 +813,8 @@
             flex-wrap: wrap
             align-items: flex-start   
             margin-top: auto 
+            button
+                margin-bottom: 10px
         &-more-btn
             margin-right: 18px 
         &-reviews-btn
@@ -527,6 +826,9 @@
         font-size: 18px
         line-height: 21px
         padding: 20px 0 50px 0
+        @media screen and ( max-width: 575px )
+            padding: 0
+            margin-top: -20px
 
 //FOOTER
 .footer
@@ -534,29 +836,66 @@
     background-position: 50% 50%
     background-size: cover
     background-repeat: no-repeat
-    margin-top: -213px    
+    margin-top: -213px  
+    //margin-top: -267px  
     padding: 177px 40px 0
+    //padding: 345px 40px 0
     position: relative
     color: white    
     z-index: 1
+    @media screen and ( max-width: 575px )
+        background-image: url('../img/footer_bg_mobile.png')
+        padding: 92px 40px 0
+        margin-top: -137px
+        text-align: center  
     &__block-link
         display: flex
         align-items: center
         padding: 20px 0
+        @media screen and ( max-width: 768px )
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            padding: 0
         div
+            margin-right: 10px
+            @media screen and ( max-width: 768px )
+                margin: 0
             &:nth-child(1)
                 margin-right: 40px
+                @media screen and ( max-width: 768px )
+                    margin: 0
+                    order: 3
+                    margin-bottom: 16px
             &:nth-child(2)
                 margin-right: 40px
-            margin-right: 10px
+                @media screen and ( max-width: 768px )
+                    margin: 0 0 16px 0 
+                    order: 4
+                    
+            &:nth-child(3)
+                @media screen and ( max-width: 768px )
+                    order: 1
+                    margin-bottom: 10px 
+            &:nth-child(4)
+                @media screen and ( max-width: 768px )
+                    order: 2
+                    margin-bottom: 27px
+                    
+            
             a
                 color: #fff
                 font-size: 16px
                 line-height: 21px
                 transition: 0.2s
+                display: block
                 &:hover
                     filter: drop-shadow(0 0 5px rgba(black ,0.3 ))
-
+    &__network
+        display: flex
+        a
+            margin-right: 10px
     &__info, &__menu
         font-family: Roboto
         font-style: normal
@@ -568,8 +907,40 @@
         list-style-position: inside
         padding: 15px 0 25px 0
                     
+// MOBILE
+.mobilepanel
+    position: fixed
+    top: 0
+    right: 100%
+    width: 100%
+    height: 100%
+    background-color: #1DACD1
+    transition: .4s
+    z-index: 100
 
-
+    font-family: 'Rotonda', 'Arial', 'Sans-Serif'
+    &.open
+        right: 0
+        padding: 20px
+    button
+        position: absolute
+        right: 25px
+        top: 20px
+        border: solid 3px white
+        padding: 10px
+    &__menu
+        ul
+            li
+                margin-bottom: 20px
+                a
+                    color: white
+                    font-size: 18px
+                    line-height: 100%
+                &.active
+                    a
+                        background: linear-gradient(110.7deg, #FDCE7D 0.01%, #AF7039 47.92%, #AF7039 55.21%, #FDCE7D 100%)
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
 
 
           

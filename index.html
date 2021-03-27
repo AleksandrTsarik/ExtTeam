@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="style/layout.css">
     <title>Document</title>
 </head>
-<body>
+<body> 
+    
+    
+    <!--Mobile Toolbar-->
+    <div class="mobilepanel">
+        <button class="mobilepanel__close">
+            <img src="img/mobile-close.svg" alt="">
+        </button>
+        <nav class="mobilepanel__menu">
+            <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Фонды</a></li>
+                <li><a href="#">Победители</a></li>
+                <li><a href="#">Вопросы-ответы</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+                <li><a href="#">Полные правила акции</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <header class="header">        
         <div class="logo">
@@ -22,6 +41,12 @@
                 <li><a href="">Личный кабинет</a></li>
             </ul>
         </nav>
+        <nav class="mobilenav">
+            <ul>
+                <li><a href="" class="btn_border"><img src="img/user_ico.svg" alt="..."></a></li>
+                <li><a href="" class="burger btn_border"><img src="img/burder_ico.svg" alt="..."></a></li>                
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -31,16 +56,24 @@
                 <div class="mainscreen__subtitle subtitle">Получайте гарантированный подарок и помогайте детям!</div>
                 <form action="">
                     <label class="form__label" for="">
-                        <input type="text" name="code" placeholder="Ввести код">
-                        <button type="submit" class="btn btn_bg">Зарегистрировать</button> 
-                        <span class="form__bg"></span>   
+                        <div class="form__open">
+                            <input type="text" name="code" placeholder="Ввести код">
+                            <button type="submit" class="btn btn_bg">Зарегистрировать</button>
+                            <span class="form__bg"></span>   
+                        </div>
+                        <div class="form__close">
+                            <input type="text" name="e-mail" placeholder="E-mail">
+                            <button type="submit" class="btn btn_bg">Напомнить о начале</button>
+                            <span class="form__bg"></span> 
+                        </div>
                     </label>            
                 </form>
                 <div class="mainscreen__formdesc">
                     Вы можете зарегистрировать код через приложение «Whats App» по номеру <a href="tel:+79160001066">+7 (916) 000-10-66</a>
                 </div>
-                <div class="mainscreen__image">
+                <div class="mainscreen__image  _anim__items _anim_stop">
                     <img src="img/nan-3-4.svg" alt="...">
+                    <img class="mobile" src="img/nan_3-4_mobile.svg" alt="...">
                 </div>
                 <div class="mainscreen__fond">
                     <div class="mainscreen__fond-left">
@@ -55,9 +88,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="mainscreen__bg">
+            <div class="mainscreen__bg">
                 <img src="img/bg.png" alt="">
-            </div>  -->
+            </div> 
            
         </section>
 
@@ -69,7 +102,7 @@
 
                 <div class="feautures__row">
 
-                    <div class="feautures__block">
+                    <div class="feautures__block _anim__items _anim_stop">
                         <div class="feautures__block-ico">
                             <div><img src="img/feautures1.svg" alt=""></div>
                         </div>
@@ -77,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="feautures__block">
+                    <div class="feautures__block _anim__items _anim_stop">
                         <div class="feautures__block-ico">
                             <div><img src="img/feautures2.svg" alt=""></div>
                         </div>
@@ -86,17 +119,19 @@
                         </div>
                     </div>
 
-                    <div class="feautures__block">
+                    <div class="feautures__block _anim__items _anim_stop">
                         <div class="feautures__block-ico">
                             <div><img src="img/feautures3.svg" alt=""></div>
                         </div>
-                        <div class="feautures__block-text">Участвуйте в еженедельном розыгрыше&nbsp;100&nbsp;000&nbsp;руб!&nbsp;<sup>1</sup> 
+                        <div class="feautures__block-text">Участвуйте в еженедельном розыгрыше&nbsp;100&nbsp;000&nbsp;руб!&nbsp;<sup>2</sup> 
                         </div>
                     </div>
 
                 </div>
+                <div class="feautures__btn">
+                    <button class=" btn btn_bg">Зарегистрировать</button>
+                </div>
                 
-                <button class="feautures__btn btn btn_bg">Зарегистрировать</button>
             </div>
         </section>
 
@@ -143,7 +178,7 @@
                                     <strong>45 рублей</strong>
                                     вам на телефон
                                 </div>
-                                <div class="sales__block-left-one__bottom-left-right">
+                                <div class="sales__block-left-one__bottom-right">
                                     <strong>15 рублей* </strong>
                                     будут перечислены 
                                     в благотворительный фонд на ваш выбор
@@ -186,7 +221,7 @@
                 <div class="offer__row">
                     <div class="offer__block">
                         <div class="offer__block-wrap">
-                            <div class="offer__block-image">
+                            <div class="offer__block-image _anim__items _anim_stop">
                                 <img src="img/nan-3-3.svg" alt="...">
                             </div>
                             <div class="offer__block-title">
@@ -204,7 +239,7 @@
                     </div>
                     <div class="offer__block">
                         <div class="offer__block-wrap">
-                            <div class="offer__block-image">
+                            <div class="offer__block-image _anim__items _anim_stop">
                                 <img src="img/nan-4-4.svg" alt="...">
                             </div>
                             <div class="offer__block-title">
@@ -231,12 +266,16 @@
     </main>
     <footer class="footer">        
         <div class="footer__block-link">
+            
             <div><a href="#">Полные правила акции</a></div>
             <div><a href="#">Политика конфиденциальности</a></div>
             <div><a href="#">Рассказать друзьям</a></div>
-            <div><a href="#"><img src="img/network-ok.svg" alt=""></a></div>
-            <div><a href="#"><img src="img/network-vk.svg" alt=""></a></div>
-            <div><a href="#"><img src="img/network-f.svg" alt=""></a></div>
+            <div class="footer__network">
+                <a href="#"><img src="img/network-ok.svg" alt=""></a>
+                <a href="#"><img src="img/network-vk.svg" alt=""></a>
+                <a href="#"><img src="img/network-f.svg" alt=""></a>
+            </div>
+
         </div>
         <div class="footer__info">Всемирная организация здравоохранения рекомендует исключительно грудное вскармливание в первые 6 месяцев и его продолжение в течение как можно более долгого периода. Детское молочко NAN 3 OPTIPRO и NAN 4 OPTIPRO разработаны с учетом пищевых потребностей здоровых детей старше 1/1,5 лет соответственно и не должны применяться для кормления детей более младшего возраста. Не являются заменителем грудного молока. Необходима консультация специалиста. Товар зарегистрирован. Полный список подарков — на сайте www.nestlebaby.ru/nan3promo.</div>
         <div class="footer__menu">
@@ -248,7 +287,6 @@
             </ol>
         </div>        
     </footer>
-    
     <script src="js/common.js"></script>
 </body>
 </html>
