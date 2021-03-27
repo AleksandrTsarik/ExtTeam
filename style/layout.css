@@ -1216,6 +1216,11 @@ button {
   padding: 25px 30px 18px;
   color: #fff;
 }
+@media screen and (max-width: 575px) {
+  .sales__block-right-one {
+    padding: 25px 18px 18px;
+  }
+}
 .sales__block-right-one-title {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
@@ -1224,6 +1229,11 @@ button {
 .sales__block-right-one-price {
   font-size: 64px;
   padding-top: 20px;
+}
+@media screen and (max-width: 575px) {
+  .sales__block-right-one-price {
+    font-size: 60px;
+  }
 }
 .sales__block-right-one-price strong {
   font-size: 96px;
@@ -1485,7 +1495,7 @@ button {
   color: white;
   z-index: 1;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 320px) {
   .footer {
     background-image: url("../img/footer_bg_mobile.png");
     padding: 92px 40px 0;
